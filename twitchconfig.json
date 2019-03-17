@@ -1,0 +1,13 @@
+{
+  "options": {
+    "debug": true
+  },
+  "connection": {
+    "reconnect": true
+  },
+  "identity": {
+    "username": "streamempiresbot",
+    "password": "oauth:6y52ltpeijtkj1wvqks7j9mow55wtg"
+  },
+  "channels": []
+}
