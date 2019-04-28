@@ -1,6 +1,3 @@
 .vscode
 node_modules
 .env
-auth.json
-config.json
-twitchconfig.json

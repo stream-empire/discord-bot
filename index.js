@@ -1,4 +1,4 @@
-const dotenv = require('dotenv'),
+ const dotenv = require('dotenv'),
     fs = require('fs');
 dotenv.config();
 const token = process.env.DISCORDTOKEN,
