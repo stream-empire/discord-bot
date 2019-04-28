@@ -8,14 +8,8 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program (bot)",
-            "program": "${workspaceFolder}/bot.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program (discord)",
-            "program": "${workspaceFolder}/discord.js"
+            "name": "Launch Program (index)",
+            "program": "${workspaceFolder}/index.js"
         }
     ]
 }
