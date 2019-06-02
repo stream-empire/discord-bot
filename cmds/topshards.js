@@ -27,19 +27,19 @@ module.exports = {
                 if (json.error === undefined) {
                     var topShards = json.sort((a, b) => a.shards < b.shards)
                         .slice(0, MaximumResults)
-                        .map(m => {
+                        .map((m, idx) => {
                             return {
-                                name: m.discordName || m.siteName,
-                                value: m.shards
+                                name: `${idx+1} - ${m.discordName || m.siteName}`,
+                                value: m.shards,
+                                inline: false
                             }
                         });
 
                     msg.channel.createMessage({
                         embed: {
                             color: 65280,
-                            title: 'Top Shards',
-                            description: "I have some data for you",
-                            fields: topShards,
+                            title: `Top ${MaximumResults} Users by Shards`,
+                            description: "```" + topShards.map(m => `${m.name} - ${m.value}`).join('\r\n') + "```",
                             footer: {
                                 text: `Requested by ${msg.author.username}#${msg.author.discriminator}`,
                                 icon_url: msg.author.avatarURL
@@ -51,6 +51,6 @@ module.exports = {
     },
 
     options: {
-        description: 'List the servers top 15 members with the most shards and how much.',
+        description: `List the servers top ${MaximumResults} members with the most shards and how much.`,
     }
 }
