@@ -12,7 +12,7 @@
     "discord.js": "^11.4.2",
     "https": "^1.0.0",
     "mongodb": "^3.1.10",
-    "mongoose": "^5.3.13",
+    "mongoose": "^5.7.5",
     "tmi.js": "^1.2.1",
     "twitch-api-v5": "^2.0.4"
   }
